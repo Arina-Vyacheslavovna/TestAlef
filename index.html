@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/adaptive.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Пижама для девочек</title>
+  </head>
+  <body>
+    <header>
+      <div class="container row">
+        <a href="#" class="header_logo">LOGO</a>
+        <div class="header_nav row">
+          <div class="header_links row">
+            <a href="#"><img src="./assets/images/person.png" alt="" class="header_link" /></a>
+            <a href="#"><img src="./assets/images/favorite.png" alt="" class="header_link" /></a>
+            <a href="#"><img src="./assets/images/bag.png" alt="" class="header_link" /></a>
+          </div>
+          <nav>
+            <div class="header_burger col">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="header_list">
+              <ul class="list col">
+                <li><a href="#">ПОСТЕЛЬНОЕ БЕЛЬЕ</a></li>
+                <li><a href="#">ОДЕЖДА ДЛЯ ДОМА</a></li>
+                <li><a href="#">ОДЕЖДА ДЛЯ УЛИЦЫ</a></li>
+                <li><a href="#">ВЫХОД</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container col">
+        <div class="row_container row">
+          <div class="main_img">
+            <div class="main_big_img">
+              <img id="main_big_img_kid" src="./assets/images/kid1_big.png" alt="" />
+            </div>
+            <div class="main_small_img col">
+              <img
+                src="./assets/images/kid1_min.png"
+                alt=""
+                class="mini_img"
+                onclick="changeIMG('./assets/images/kid1_big.png')"
+              />
+              <img
+                src="./assets/images/kid2_min.png"
+                alt=""
+                class="mini_img"
+                onclick="changeIMG('./assets/images/kid2_min.png')"
+              />
+              <img
+                src="./assets/images/kid3_min.png"
+                alt=""
+                class="mini_img"
+                onclick="changeIMG('./assets/images/kid3_min.png')"
+              />
+              <img
+                src="./assets/images/kid4_min.png"
+                alt=""
+                class="mini_img"
+                onclick="changeIMG('./assets/images/kid4_min.png')"
+              />
+              <img
+                src="./assets/images/kid5_min.png"
+                alt=""
+                class="mini_img"
+                onclick="changeIMG('./assets/images/kid5_min.png')"
+              />
+            </div>
+          </div>
+          <div class="main_description col">
+            <div class="main_description_title">
+              <h1 id="title">Пижама для девочек</h1>
+              <span class="article">Арт. 02765/46</span>
+              <div class="reviews row">
+                <p>Отзывы</p>
+                <div class="reviews_stars row">
+                  <img src="./assets/images/star_full.png" alt="" />
+                  <img src="./assets/images/star_full.png" alt="" />
+                  <img src="./assets/images/star_full.png" alt="" />
+                  <img src="./assets/images/star_full.png" alt="" />
+                  <img src="./assets/images/star.png" alt="" />
+                </div>
+                <div class="reviews_count">
+                  <a href="#" class="row"
+                    ><p>14 отзывов</p>
+                    <img src="./assets/images/arrow_right.png" alt=""
+                  /></a>
+                </div>
+              </div>
+            </div>
+            <div class="main_description_price row">
+              <p class="new">800 <span> &#8381;</span></p>
+              <p class="old">1 500 <span> &#8381;</span></p>
+              <a href="#"><img src="./assets/images/arrow_right.png" alt="" /></a>
+            </div>
+            <div class="main_description_low_prices row">
+              <button class="main_description_low_prices_btn">скидка -36%</button>
+              <button class="main_description_low_prices_btn">акция -20%</button>
+            </div>
+            <div class="main_description_sizes col">
+              <select name="" id="" class="select">
+                <option disabled selected>Выбрать размер</option>
+                <option value="">XS</option>
+                <option value="">S</option>
+                <option value="">M</option>
+                <option value="">L</option>
+                <option value="">XL</option>
+              </select>
+              <a href="#">Определить размер</a>
+            </div>
+            <div class="main_description_bags col">
+              <div class="row bags_wrap">
+                <div class="bags_count row">
+                  <button class="plus" onclick="count.innerText++">+</button>
+                  <span id="count"> 1</span>
+                  <button
+                    class="minus"
+                    onclick="count.innerText>1?count.innerText--:count.innerText=1"
+                  >
+                    -
+                  </button>
+                </div>
+                <div class="row">
+                  <button class="btn_black modal_open" data-modal="1">Добавить в корзину</button>
+                  <button class="btn_black btn_black_favorite modal_open" data-modal="2">
+                    <img id="like" src="./assets/images/favorite_white.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+              <a href="#">Купить в 1 клик</a>
+
+              <div class="overlay">
+                <div class="modal" data-modal="1">
+                  <p class="modal_close">&#215;</p>
+                  <p class="modal_text">
+                    Товар "<span id="final_name"></span>" в количестве
+                    <span id="final_count"></span> единиц добавлен в корзину
+                  </p>
+                </div>
+
+                <div class="modal col" data-modal="2">
+                  <p class="modal_close">&#215;</p>
+                  <p class="modal_text">
+                    Товар "<span id="final_name2"></span>" в количестве
+                    <span id="final_count2"></span> единиц добавлен в избранное
+                  </p>
+                </div>
+              </div>
+            </div>
+            <hr class="hr" />
+            <div class="main_description_options col">
+              <div class="row">
+                <img src="./assets/images/Closes.svg" alt="" />
+                <p>Описание товара</p>
+              </div>
+              <div class="row">
+                <img src="./assets/images/clock.svg" alt="" />
+                <p>Доставка и возврат</p>
+              </div>
+              <div class="row">
+                <img src="./assets/images/pay.svg" alt="" />
+                <p>Способы оплаты</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" class="see_catalogy">Посмотреть все стили</a>
+
+        <div class="catalogy row">
+          <div class="catalogy_big">
+            <!-- <picture>
+              <source media="(min-width:767px)" srcset="./assets/images/child1.png" />
+              <source media="(max-width:768px)" srcset="./assets/images/child1_mobile.png" /> -->
+            <img src="./assets/images/child1.png" alt="" />
+            <!-- </picture> -->
+            <div class="block_child">
+              <a href="#" class="col">
+                <img src="./assets/images/full_screen.svg" alt="" class="link1" />
+                <div class="block_child_bag col">
+                  <img src="./assets/images/big_bag.svg" alt="" />
+                  <p>Узнай, что на мне</p>
+                </div>
+                <div class="block_child_favorite row">
+                  <img src="./assets/images/favorite_full.svg" alt="" />
+                  <p>322</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="catalogy_small row">
+            <div class="catalogy_small_img">
+              <img src="./assets/images/child2.png" alt="" />
+              <div class="block_child_small">
+                <a href="#" class="col">
+                  <img src="./assets/images/full_screen.svg" alt="" class="link1" />
+                  <div class="block_child_bag col">
+                    <img src="./assets/images/big_bag.svg" alt="" />
+                    <p>Узнай, что на мне</p>
+                  </div>
+                  <div class="block_child_favorite row">
+                    <img src="./assets/images/favorite_full.svg" alt="" />
+                    <p>303</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="catalogy_small_img">
+              <img src="./assets/images/child3.png" alt="" />
+
+              <div class="block_child_small">
+                <a href="#" class="col">
+                  <img src="./assets/images/full_screen.svg" alt="" class="link1" />
+                  <div class="block_child_bag col">
+                    <img src="./assets/images/big_bag.svg" alt="" />
+                    <p>Узнай, что на мне</p>
+                  </div>
+                  <div class="block_child_favorite row">
+                    <img src="./assets/images/favorite_full.svg" alt="" />
+                    <p>265</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="catalogy_small_img">
+              <img src="./assets/images/child4.png" alt="" />
+              <div class="block_child_small">
+                <a href="#" class="col">
+                  <img src="./assets/images/full_screen.svg" alt="" class="link1" />
+                  <div class="block_child_bag col">
+                    <img src="./assets/images/big_bag.svg" alt="" />
+                    <p>Узнай, что на мне</p>
+                  </div>
+                  <div class="block_child_favorite row">
+                    <img src="./assets/images/favorite_full.svg" alt="" />
+                    <p>200</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="catalogy_small_img">
+              <img src="./assets/images/child5.png" alt="" />
+
+              <div class="block_child_small">
+                <a href="#" class="col">
+                  <img src="./assets/images/full_screen.svg" alt="" class="link1" />
+                  <div class="block_child_bag col">
+                    <img src="./assets/images/big_bag.svg" alt="" />
+                    <p>Узнай, что на мне</p>
+                  </div>
+                  <div class="block_child_favorite row">
+                    <img src="./assets/images/favorite_full.svg" alt="" />
+                    <p>112</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer_container row">
+          <div class="to_buyers col">
+            <ul class="col">
+              <p>ПОКУПАТЕЛЯМ</p>
+              <li><a href="#"> Каталог</a></li>
+              <li><a href="#"> Акции</a></li>
+              <li><a href="#"> Бренды</a></li>
+            </ul>
+          </div>
+          <div class="about_us col">
+            <ul class="col">
+              <p>О НАС</p>
+              <li><a href="#"> О компании</a></li>
+              <li><a href="#"> Новости</a></li>
+              <li><a href="#"> Команда</a></li>
+            </ul>
+          </div>
+          <div class="email col">
+            <p>Узнайте первыми о новинках и акциях</p>
+            <form
+              id="form_email"
+              class="col"
+              method="post"
+              onsubmit="validate('form_email','email'); return false"
+              action=""
+            >
+              <div class="email_box row">
+                <input id="email" name="email" type="text" placeholder="Адрес электронной почты" />
+                <button type="reset">&#215;</button>
+              </div>
+              <input type="submit" class="subscribe" id="subscribe" value="Подписаться" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/main.js"></script>
+    <script src=""></script>
+  </body>
+</html>

@@ -1,0 +1,214 @@
+@media (max-width: 1399px) {
+  .catalogy {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 42px;
+    /* text-align: center; */
+  }
+
+  .row_container {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .catalogy_big {
+    margin: 9px auto;
+  }
+
+  .catalogy_small {
+    justify-content: center;
+  }
+
+  .to_buyers,
+  .about_us {
+    width: 163px;
+    margin-bottom: 50px;
+  }
+
+  .email p {
+    text-align: center;
+  }
+  footer .container {
+    max-width: 750px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .header_burger {
+    /* display: block; */
+    width: 24px;
+    height: 24px;
+    z-index: 2;
+    position: relative;
+    justify-content: space-between;
+    overflow: hidden;
+    cursor: pointer;
+    /* padding: 3px; */
+  }
+
+  .header_burger span {
+    width: 18px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333333;
+    /* transition: all 0.5s; */
+  }
+
+  .header_burger span:nth-child(2) {
+    top: calc(50% - 5px);
+  }
+
+  .header_burger span:nth-child(3) {
+    top: calc(50% + 5px);
+  }
+
+  .list {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 277px; */
+    padding: 80px 30px 13px;
+    background: #ffffff;
+    list-style: none;
+  }
+
+  ._active {
+    display: block;
+  }
+
+  .list li {
+    margin-bottom: 30px;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    /* Brand / Black */
+
+    color: #333333;
+  }
+  /* 
+  .header_burger span {
+    position: absolute;
+    width: 18px;
+    height: 1px;
+    background-color: #333333;
+  }
+
+  .header_burger span:nth-child(2) {
+    margin: 5px 0;
+    background-color: red;
+  }
+
+  .header_burger span:nth-child(3) {
+    height: 3px;
+    margin: 10px 0;
+    background-color: chartreuse;
+  } */
+
+  main .container,
+  footer .container {
+    max-width: 375px;
+  }
+
+  .bags_wrap {
+    flex-wrap: wrap;
+  }
+
+  .btn_black,
+  .btn_black_favorite {
+    margin: 15px 4px 0 0;
+  }
+
+  #main_big_img_kid {
+    max-width: 375px;
+    height: 100%;
+  }
+  .main_small_img {
+    top: 29px;
+  }
+  .main_small_img img {
+    width: 40px;
+    height: 100%;
+  }
+  .main_description {
+    max-width: 355px;
+    min-width: 300px;
+    padding-left: 20px;
+  }
+
+  .catalogy_big img,
+  .catalogy_small_img img {
+    width: 100%;
+  }
+
+  .catalogy_big {
+    width: 375px;
+    height: 375px;
+  }
+
+  .block_child {
+    width: 351px;
+    height: 353px;
+  }
+
+  .catalogy_small {
+    justify-content: center;
+  }
+
+  .catalogy_small_img {
+    width: 183px;
+    height: 183px;
+    margin: 4px auto;
+  }
+
+  .block_child_small {
+    width: 159px;
+    height: 160px;
+  }
+
+  .footer_container {
+    justify-content: start;
+    flex-wrap: wrap;
+    padding: 0 18px;
+  }
+
+  footer ul {
+    padding: 0;
+  }
+
+  .to_buyers,
+  .about_us {
+    max-width: 150px;
+    margin-bottom: 50px;
+  }
+
+  .email {
+    width: 335px;
+  }
+
+  .email p {
+    text-align: left;
+  }
+}
+
+@media (max-width: 375px) {
+  html {
+    width: 375px;
+  }
+}
