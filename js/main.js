@@ -7,11 +7,9 @@ let footer = document.querySelector('footer');
 menuBtn.addEventListener('click', function () {
   menu.classList.toggle('_active');
   main.addEventListener('click', function () {
-    menuBtn.classList.remove('_active');
     menu.classList.remove('_active');
   });
   footer.addEventListener('click', function () {
-    menuBtn.classList.remove('_active');
     menu.classList.remove('_active');
   });
 });
