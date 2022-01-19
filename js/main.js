@@ -1,10 +1,10 @@
 //BURGER
 let menuBtn = document.querySelector('.header_burger');
 let menu = document.querySelector('.list');
+let link = document.querySelectorAll('.link');
 let main = document.querySelector('main');
 let footer = document.querySelector('footer');
 menuBtn.addEventListener('click', function () {
-  menuBtn.classList.toggle('_active');
   menu.classList.toggle('_active');
   main.addEventListener('click', function () {
     menuBtn.classList.remove('_active');
@@ -13,6 +13,11 @@ menuBtn.addEventListener('click', function () {
   footer.addEventListener('click', function () {
     menuBtn.classList.remove('_active');
     menu.classList.remove('_active');
+  });
+});
+link.forEach(function (item) {
+  item.addEventListener('click', function () {
+    menu.classList.toggle('_active');
   });
 });
 

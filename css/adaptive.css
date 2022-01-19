@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: center;
     margin-bottom: 42px;
-    /* text-align: center; */
   }
 
   .row_container {
@@ -43,7 +42,6 @@
   }
 
   .header_burger {
-    /* display: block; */
     width: 24px;
     height: 24px;
     z-index: 2;
@@ -51,7 +49,6 @@
     justify-content: space-between;
     overflow: hidden;
     cursor: pointer;
-    /* padding: 3px; */
   }
 
   .header_burger span {
@@ -62,7 +59,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #333333;
-    /* transition: all 0.5s; */
   }
 
   .header_burger span:nth-child(2) {
@@ -79,7 +75,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    /* height: 277px; */
     padding: 80px 30px 13px;
     background: #ffffff;
     list-style: none;
@@ -91,35 +86,13 @@
 
   .list li {
     margin-bottom: 30px;
+    max-width: 200px;
     font-size: 12px;
     line-height: 16px;
-    /* identical to box height, or 133% */
-
     letter-spacing: 0.04em;
     text-transform: uppercase;
-
-    /* Brand / Black */
-
     color: #333333;
   }
-  /* 
-  .header_burger span {
-    position: absolute;
-    width: 18px;
-    height: 1px;
-    background-color: #333333;
-  }
-
-  .header_burger span:nth-child(2) {
-    margin: 5px 0;
-    background-color: red;
-  }
-
-  .header_burger span:nth-child(3) {
-    height: 3px;
-    margin: 10px 0;
-    background-color: chartreuse;
-  } */
 
   main .container,
   footer .container {
